@@ -1,5 +1,3 @@
-; ModuleID = 'привіт'
-source_filename = "\D0\BF\D1\80\D0\B8\D0\B2\D1\96\D1\82"
 target datalayout = "e-m:w-p270:32:32-p271:32:32-p272:64:64-p:64:64-i32:32-i64:64-i128:128-n32:64-S128-Fn32"
 target triple = "aarch64-pc-windows-gnu"
 
@@ -13,13 +11,13 @@ target triple = "aarch64-pc-windows-gnu"
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\92\D0\B7\D1\8F\D1\82\D1\96\D0\97\D0\BD\D0\B0\D1\87\D0\B5\D0\BD\D0\BD\D1\8F" = type { i64, ptr }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\A7\D0\B5\D1\80\D0\B3\D0\B0\D0\97\D0\B4\D1\96\D0\B9\D1\81\D0\BD\D0\B5\D0\BD\D0\BD\D1\8F" = type { ptr, ptr }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\97\D0\B0\D0\B4\D1\96\D1\8F\D0\BD\D1\96" = type { i8, i32, ptr, i32 }
-%"\D0\BA\D0\B4" = type { i64, ptr }
+%"\D0\BA\D0\B4" = type { ptr, i64 }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9D\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83" = type { i64, ptr, i64 }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9C\D1\96\D1\81\D1\86\D0\B5\D0\B7\D0\BD\D0\B0\D1\85\D0\BE\D0\B4\D0\B6\D0\B5\D0\BD\D0\BD\D1\8F\D0\92\D0\BA\D0\B0\D0\B7\D1\96\D0\B2\D0\BE\D0\BA" = type { i64, ptr }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83" = type { ptr, i1, ptr, ptr, %"\D0\BA\D0\B4" }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B8\D0\B7\D0\BD\D0\B0\D1\87\D0\B5\D0\BD\D0\BD\D1\8F" = type { i64, ptr, i64 }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\94\D1\96\D0\B9\D1\81\D0\BD\D1\96\D1\81\D1\82\D1\8C" = type { ptr, ptr, i1, i64, ptr, %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B8\D0\B7\D0\BD\D0\B0\D1\87\D0\B5\D0\BD\D0\BD\D1\8F" }
-%"\D1\8E8" = type { i64, ptr }
+%"\D1\8E8" = type { ptr, i64 }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\9F\D0\BE\D1\81\D0\BB\D1\96\D0\B4\D0\BE\D0\B2\D0\BD\D0\BE\D1\81\D1\82\D1\96" = type { ptr, i1, ptr, ptr, i64, ptr }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\94\D0\B0\D0\BD\D0\B8\D1\85" = type { ptr, i1, ptr, ptr, i64, ptr }
 %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\95\D0\BB\D0\B5\D0\BC\D0\B5\D0\BD\D1\82\D0\A8\D0\BB\D1\8F\D1\85\D1\83\D0\9F\D1\80\D0\B8\D1\81\D1\82\D1\80\D0\BE\D1\8E\D0\9C\D0\B0\D0\B2\D0\BA\D0\B8" = type { ptr, i64 }
@@ -248,7 +246,7 @@ bb5:                                              ; preds = %bb3
   %loadtmp6 = load ptr, ptr %alloca, align 8
   %loadtmp7 = load %"\D0\BA\D0\B4", ptr %alloca2, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" %loadtmp7)
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 0
   %loadtmp8 = load ptr, ptr %alloca, align 8
   %loadtmp9 = load ptr, ptr %getelementptrtmp, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp8, ptr %loadtmp9)
@@ -281,8 +279,8 @@ bb:
 
 bb8:                                              ; preds = %bb
   store i64 0, ptr %alloca5, align 8
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
-  %getelementptrtmp9 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp9 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp = load double, ptr %alloca2, align 8
   %calltmp = call i1 @"\D0\BF\D1\80\D0\B8\D1\81\D1\82\D1\80\D1\96\D0\B9_\D0\BC\D0\B0\D0\B2\D0\BA\D0\B8_\D0\BF\D0\B5\D1\80\D0\B5\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\8064_\D0\B2_\D0\BA\D0\B4"(double %loadtmp, ptr %getelementptrtmp, ptr %getelementptrtmp9, ptr %alloca5)
   %icmpnetmp = icmp ne i1 %calltmp, false
@@ -295,14 +293,14 @@ bb10:                                             ; preds = %bb8
   br i1 %icmpnetmp12, label %bb13, label %bb69
 
 bb13:                                             ; preds = %bb10
-  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
+  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
   %loadtmp15 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp16 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp15, i32 0, i32 0
+  %getelementptrtmp16 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp15, i32 0, i32 1
   %loadtmp17 = load i64, ptr %getelementptrtmp14, align 8
   store i64 %loadtmp17, ptr %getelementptrtmp16, align 8
-  %getelementptrtmp18 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp18 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp19 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp20 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp19, i32 0, i32 1
+  %getelementptrtmp20 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp19, i32 0, i32 0
   %loadtmp21 = load ptr, ptr %getelementptrtmp18, align 8
   store ptr %loadtmp21, ptr %getelementptrtmp20, align 8
   store i1 true, ptr %alloca, align 1
@@ -314,7 +312,7 @@ bb22:                                             ; preds = %bb66, %bb66, %bb59,
   ret i1 %loadtmp23
 
 bb24:                                             ; preds = %bb69, %bb13
-  %getelementptrtmp25 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
+  %getelementptrtmp25 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
   %loadtmp26 = load i64, ptr %getelementptrtmp25, align 8
   %addtmp = add i64 %loadtmp26, 10
   %loadtmp27 = load ptr, ptr %alloca1, align 8
@@ -323,8 +321,8 @@ bb24:                                             ; preds = %bb69, %bb13
   %loadtmp29 = load ptr, ptr %alloca1, align 8
   %loadtmp30 = load %"\D0\BA\D0\B4", ptr %alloca4, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp29, ptr %alloca6, %"\D0\BA\D0\B4" %loadtmp30)
-  %getelementptrtmp31 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 0
-  %getelementptrtmp32 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 1
+  %getelementptrtmp31 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 1
+  %getelementptrtmp32 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 0
   %loadtmp33 = load i64, ptr %alloca5, align 8
   %calltmp34 = call i1 @"\D0\BF\D1\80\D0\B8\D1\81\D1\82\D1\80\D1\96\D0\B9_\D0\BC\D0\B0\D0\B2\D0\BA\D0\B8_\D0\BF\D0\B5\D1\80\D0\B5\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\8664_\D0\B2_\D0\BA\D0\B4"(i64 %loadtmp33, ptr %getelementptrtmp31, ptr %getelementptrtmp32)
   %icmpnetmp35 = icmp ne i1 %calltmp34, false
@@ -332,7 +330,7 @@ bb24:                                             ; preds = %bb69, %bb13
 
 bb36:                                             ; preds = %bb24
   %loadtmp37 = load ptr, ptr %alloca1, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp37, ptr %alloca6, %"\D0\BA\D0\B4" { i64 1, ptr @0 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp37, ptr %alloca6, %"\D0\BA\D0\B4" { ptr @0, i64 1 })
   %loadtmp38 = load i64, ptr %alloca5, align 8
   %icmpsgttmp = icmp sgt i64 %loadtmp38, 0
   %icmpnetmp39 = icmp ne i1 %icmpsgttmp, false
@@ -340,29 +338,29 @@ bb36:                                             ; preds = %bb24
 
 bb40:                                             ; preds = %bb36
   %loadtmp41 = load ptr, ptr %alloca1, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp41, ptr %alloca6, %"\D0\BA\D0\B4" { i64 1, ptr @1 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp41, ptr %alloca6, %"\D0\BA\D0\B4" { ptr @1, i64 1 })
   br label %bb42
 
 bb42:                                             ; preds = %bb67, %bb40
   %loadtmp43 = load ptr, ptr %alloca1, align 8
   %loadtmp44 = load %"\D0\BA\D0\B4", ptr %alloca7, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\BF\D0\BE\D0\BA\D0\BB\D0\B0\D1\81\D1\82\D0\B8_\D0\B2_\D0\BD\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87_\D1\82\D0\B5\D0\BA\D1\81\D1\82\D1\83"(ptr %loadtmp43, ptr %alloca6, %"\D0\BA\D0\B4" %loadtmp44)
-  %getelementptrtmp45 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 1
+  %getelementptrtmp45 = getelementptr %"\D0\BA\D0\B4", ptr %alloca7, i32 0, i32 0
   %loadtmp46 = load ptr, ptr %alloca1, align 8
   %loadtmp47 = load ptr, ptr %getelementptrtmp45, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp46, ptr %loadtmp47)
-  %getelementptrtmp48 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp48 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp49 = load ptr, ptr %alloca1, align 8
   %loadtmp50 = load ptr, ptr %getelementptrtmp48, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp49, ptr %loadtmp50)
   %getelementptrtmp51 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9D\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %alloca6, i32 0, i32 0
   %loadtmp52 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp53 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp52, i32 0, i32 0
+  %getelementptrtmp53 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp52, i32 0, i32 1
   %loadtmp54 = load i64, ptr %getelementptrtmp51, align 8
   store i64 %loadtmp54, ptr %getelementptrtmp53, align 8
   %getelementptrtmp55 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9D\D0\B0\D0\BA\D0\BE\D0\BF\D0\B8\D1\87\D1\83\D0\B2\D0\B0\D1\87\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %alloca6, i32 0, i32 1
   %loadtmp56 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp57 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp56, i32 0, i32 1
+  %getelementptrtmp57 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp56, i32 0, i32 0
   %loadtmp58 = load ptr, ptr %getelementptrtmp55, align 8
   store ptr %loadtmp58, ptr %getelementptrtmp57, align 8
   store i1 true, ptr %alloca, align 1
@@ -374,7 +372,7 @@ bb59:                                             ; preds = %bb68, %bb42
   %loadtmp61 = load ptr, ptr %alloca1, align 8
   %loadtmp62 = load ptr, ptr %getelementptrtmp60, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp61, ptr %loadtmp62)
-  %getelementptrtmp63 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp63 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp64 = load ptr, ptr %alloca1, align 8
   %loadtmp65 = load ptr, ptr %getelementptrtmp63, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp64, ptr %loadtmp65)
@@ -557,7 +555,7 @@ bb5:                                              ; preds = %bb3
   %loadtmp6 = load ptr, ptr %alloca, align 8
   %loadtmp7 = load %"\D0\BA\D0\B4", ptr %alloca2, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" %loadtmp7)
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 0
   %loadtmp8 = load ptr, ptr %alloca, align 8
   %loadtmp9 = load ptr, ptr %getelementptrtmp, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp8, ptr %loadtmp9)
@@ -586,22 +584,22 @@ bb:
   br label %bb5
 
 bb5:                                              ; preds = %bb
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
-  %getelementptrtmp6 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp6 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp = load i64, ptr %alloca2, align 8
   %calltmp = call i1 @"\D0\BF\D1\80\D0\B8\D1\81\D1\82\D1\80\D1\96\D0\B9_\D0\BC\D0\B0\D0\B2\D0\BA\D0\B8_\D0\BF\D0\B5\D1\80\D0\B5\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\8664_\D0\B2_\D0\BA\D0\B4"(i64 %loadtmp, ptr %getelementptrtmp, ptr %getelementptrtmp6)
   %icmpnetmp = icmp ne i1 %calltmp, false
   br i1 %icmpnetmp, label %bb7, label %bb19
 
 bb7:                                              ; preds = %bb5
-  %getelementptrtmp8 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
+  %getelementptrtmp8 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
   %loadtmp9 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp10 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp9, i32 0, i32 0
+  %getelementptrtmp10 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp9, i32 0, i32 1
   %loadtmp11 = load i64, ptr %getelementptrtmp8, align 8
   store i64 %loadtmp11, ptr %getelementptrtmp10, align 8
-  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp13 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp13, i32 0, i32 1
+  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp13, i32 0, i32 0
   %loadtmp15 = load ptr, ptr %getelementptrtmp12, align 8
   store ptr %loadtmp15, ptr %getelementptrtmp14, align 8
   store i1 true, ptr %alloca, align 1
@@ -641,7 +639,7 @@ bb5:                                              ; preds = %bb3
   %loadtmp6 = load ptr, ptr %alloca, align 8
   %loadtmp7 = load %"\D0\BA\D0\B4", ptr %alloca2, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" %loadtmp7)
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 0
   %loadtmp8 = load ptr, ptr %alloca, align 8
   %loadtmp9 = load ptr, ptr %getelementptrtmp, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp8, ptr %loadtmp9)
@@ -670,22 +668,22 @@ bb:
   br label %bb5
 
 bb5:                                              ; preds = %bb
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
-  %getelementptrtmp6 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp6 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp = load i64, ptr %alloca2, align 8
   %calltmp = call i1 @"\D0\BF\D1\80\D0\B8\D1\81\D1\82\D1\80\D1\96\D0\B9_\D0\BC\D0\B0\D0\B2\D0\BA\D0\B8_\D0\BF\D0\B5\D1\80\D0\B5\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D0\BF64_\D0\B2_\D0\BA\D0\B4"(i64 %loadtmp, ptr %getelementptrtmp, ptr %getelementptrtmp6)
   %icmpnetmp = icmp ne i1 %calltmp, false
   br i1 %icmpnetmp, label %bb7, label %bb19
 
 bb7:                                              ; preds = %bb5
-  %getelementptrtmp8 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
+  %getelementptrtmp8 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
   %loadtmp9 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp10 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp9, i32 0, i32 0
+  %getelementptrtmp10 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp9, i32 0, i32 1
   %loadtmp11 = load i64, ptr %getelementptrtmp8, align 8
   store i64 %loadtmp11, ptr %getelementptrtmp10, align 8
-  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 1
+  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %alloca4, i32 0, i32 0
   %loadtmp13 = load ptr, ptr %alloca3, align 8
-  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp13, i32 0, i32 1
+  %getelementptrtmp14 = getelementptr %"\D0\BA\D0\B4", ptr %loadtmp13, i32 0, i32 0
   %loadtmp15 = load ptr, ptr %getelementptrtmp12, align 8
   store ptr %loadtmp15, ptr %getelementptrtmp14, align 8
   store i1 true, ptr %alloca, align 1
@@ -874,7 +872,7 @@ bb2:                                              ; preds = %bb
   %loadtmp3 = load %"\D0\BA\D0\B4", ptr %alloca1, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp, %"\D0\BA\D0\B4" %loadtmp3)
   %loadtmp4 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { i64 1, ptr @2 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { ptr @2, i64 1 })
   br label %bb5
 
 bb5:                                              ; preds = %bb2
@@ -928,7 +926,7 @@ bb2:                                              ; preds = %bb
   %loadtmp3 = load double, ptr %alloca1, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D1\8064"(ptr %loadtmp, double %loadtmp3)
   %loadtmp4 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { i64 1, ptr @3 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { ptr @3, i64 1 })
   br label %bb5
 
 bb5:                                              ; preds = %bb2
@@ -948,7 +946,7 @@ bb2:                                              ; preds = %bb
   %loadtmp3 = load i64, ptr %alloca1, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D1\8664"(ptr %loadtmp, i64 %loadtmp3)
   %loadtmp4 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { i64 1, ptr @4 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { ptr @4, i64 1 })
   br label %bb5
 
 bb5:                                              ; preds = %bb2
@@ -968,7 +966,7 @@ bb2:                                              ; preds = %bb
   %loadtmp3 = load i64, ptr %alloca1, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BF64"(ptr %loadtmp, i64 %loadtmp3)
   %loadtmp4 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { i64 1, ptr @5 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp4, %"\D0\BA\D0\B4" { ptr @5, i64 1 })
   br label %bb5
 
 bb5:                                              ; preds = %bb2
@@ -1014,10 +1012,10 @@ bb8:                                              ; preds = %bb50, %bb50, %bb46,
 bb10:                                             ; preds = %bb52, %bb7
   %loadtmp11 = load ptr, ptr %alloca2, align 8
   %getelementptrtmp = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %loadtmp11, i32 0, i32 4
-  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp, i32 0, i32 0
+  %getelementptrtmp12 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp, i32 0, i32 1
   %loadtmp13 = load ptr, ptr %alloca3, align 8
   %getelementptrtmp14 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %loadtmp13, i32 0, i32 4
-  %getelementptrtmp15 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp14, i32 0, i32 0
+  %getelementptrtmp15 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp14, i32 0, i32 1
   %loadtmp16 = load i64, ptr %getelementptrtmp12, align 8
   %loadtmp17 = load i64, ptr %getelementptrtmp15, align 8
   %icmpnetmp18 = icmp ne i64 %loadtmp16, %loadtmp17
@@ -1036,7 +1034,7 @@ bb21:                                             ; preds = %bb51, %bb20
 bb22:                                             ; preds = %bb21, %bb47
   %loadtmp23 = load ptr, ptr %alloca2, align 8
   %getelementptrtmp24 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %loadtmp23, i32 0, i32 4
-  %getelementptrtmp25 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp24, i32 0, i32 0
+  %getelementptrtmp25 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp24, i32 0, i32 1
   %loadtmp26 = load i64, ptr %alloca4, align 8
   %loadtmp27 = load i64, ptr %getelementptrtmp25, align 8
   %icmpulttmp = icmp ult i64 %loadtmp26, %loadtmp27
@@ -1046,13 +1044,13 @@ bb22:                                             ; preds = %bb21, %bb47
 bb29:                                             ; preds = %bb22
   %loadtmp30 = load ptr, ptr %alloca2, align 8
   %getelementptrtmp31 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %loadtmp30, i32 0, i32 4
-  %getelementptrtmp32 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp31, i32 0, i32 1
+  %getelementptrtmp32 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp31, i32 0, i32 0
   %loadtmp33 = load ptr, ptr %getelementptrtmp32, align 8
   %loadtmp34 = load i64, ptr %alloca4, align 8
   %getelementptrtmp35 = getelementptr i8, ptr %loadtmp33, i64 %loadtmp34
   %loadtmp36 = load ptr, ptr %alloca3, align 8
   %getelementptrtmp37 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9F\D1\80\D0\B5\D0\B4\D0\BC\D0\B5\D1\82\D0\A2\D0\B5\D0\BA\D1\81\D1\82\D1\83", ptr %loadtmp36, i32 0, i32 4
-  %getelementptrtmp38 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp37, i32 0, i32 1
+  %getelementptrtmp38 = getelementptr %"\D0\BA\D0\B4", ptr %getelementptrtmp37, i32 0, i32 0
   %loadtmp39 = load ptr, ptr %getelementptrtmp38, align 8
   %loadtmp40 = load i64, ptr %alloca4, align 8
   %getelementptrtmp41 = getelementptr i8, ptr %loadtmp39, i64 %loadtmp40
@@ -1108,7 +1106,7 @@ bb3:                                              ; preds = %bb
   %loadtmp5 = load ptr, ptr %alloca2, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D1\88\D0\BB\D1\8F\D1\85"(ptr %loadtmp, i64 %loadtmp4, ptr %loadtmp5)
   %loadtmp6 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" { i64 1, ptr @6 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" { ptr @6, i64 1 })
   br label %bb7
 
 bb7:                                              ; preds = %bb3
@@ -1670,7 +1668,7 @@ bb3:                                              ; preds = %bb
   %loadtmp5 = load %"\D0\BA\D0\B4", ptr %alloca2, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\BE\D0\BB\D1\8C\D0\BE\D1\80\D0\BE\D0\B2\D0\BE"(ptr %loadtmp, i64 %loadtmp4, %"\D0\BA\D0\B4" %loadtmp5)
   %loadtmp6 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" { i64 1, ptr @7 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp6, %"\D0\BA\D0\B4" { ptr @7, i64 1 })
   br label %bb7
 
 bb7:                                              ; preds = %bb3
@@ -2086,8 +2084,8 @@ bb:
   br label %bb3
 
 bb3:                                              ; preds = %bb
-  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 0
-  %getelementptrtmp4 = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 1
+  %getelementptrtmp = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 1
+  %getelementptrtmp4 = getelementptr %"\D0\BA\D0\B4", ptr %alloca2, i32 0, i32 0
   %loadtmp = load i64, ptr %alloca1, align 8
   %loadtmp5 = load i64, ptr %getelementptrtmp, align 8
   %loadtmp6 = load ptr, ptr %getelementptrtmp4, align 8
@@ -2448,7 +2446,7 @@ bb4:                                              ; preds = %bb
   %loadtmp7 = load ptr, ptr %alloca3, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D1\88\D0\BB\D1\8F\D1\85_\D0\BA\D0\BE\D0\BB\D1\8C\D0\BE\D1\80\D0\BE\D0\B2\D0\BE"(ptr %loadtmp, i64 %loadtmp5, i64 %loadtmp6, ptr %loadtmp7)
   %loadtmp8 = load ptr, ptr %alloca, align 8
-  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp8, %"\D0\BA\D0\B4" { i64 1, ptr @8 })
+  call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B2\D0\B8\D0\B2\D0\B5\D1\81\D1\82\D0\B8_\D0\BA\D0\B4"(ptr %loadtmp8, %"\D0\BA\D0\B4" { ptr @8, i64 1 })
   br label %bb9
 
 bb9:                                              ; preds = %bb4
@@ -2835,12 +2833,12 @@ bb62:                                             ; preds = %bb90, %bb58
   %loadtmp79 = load ptr, ptr %alloca5, align 8
   %getelementptrtmp80 = getelementptr ptr, ptr %loadtmp79, i32 0
   store ptr %calltmp78, ptr %getelementptrtmp80, align 8
-  %loadtmp81 = load i64, ptr %alloca13, align 8
+  %loadtmp81 = load ptr, ptr %alloca14, align 8
   %getelementptrtmp82 = getelementptr %"\D0\BA\D0\B4", ptr %alloca15, i32 0, i32 0
-  store i64 %loadtmp81, ptr %getelementptrtmp82, align 8
-  %loadtmp83 = load ptr, ptr %alloca14, align 8
+  store ptr %loadtmp81, ptr %getelementptrtmp82, align 8
+  %loadtmp83 = load i64, ptr %alloca13, align 8
   %getelementptrtmp84 = getelementptr %"\D0\BA\D0\B4", ptr %alloca15, i32 0, i32 1
-  store ptr %loadtmp83, ptr %getelementptrtmp84, align 8
+  store i64 %loadtmp83, ptr %getelementptrtmp84, align 8
   %loadtmp85 = load ptr, ptr %alloca1, align 8
   %loadtmp86 = load %"\D0\BA\D0\B4", ptr %alloca15, align 8
   %calltmp87 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp85, %"\D0\BA\D0\B4" %loadtmp86)
