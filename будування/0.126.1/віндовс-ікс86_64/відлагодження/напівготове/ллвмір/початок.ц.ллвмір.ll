@@ -760,7 +760,7 @@ bb23:                                             ; preds = %bb13
   call void %loadtmp28(%"\D0\BA\D0\B4" %loadtmp29, i1 true, i64 0, i64 0, ptr %loadtmp30)
   br label %bb31
 
-bb31:                                             ; preds = %bb57, %bb23
+bb31:                                             ; preds = %bb55, %bb23
   %loadtmp32 = load ptr, ptr %alloca6, align 8
   %loadtmp33 = load ptr, ptr %alloca, align 8
   call void @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\B7\D0\B2\D1\96\D0\BB\D1\8C\D0\BD\D0\B8\D1\82\D0\B8"(ptr %loadtmp32, ptr %loadtmp33)
@@ -785,37 +785,36 @@ bb41:                                             ; preds = %bb13
   %calltmp = call i1 @"\D0\BF\D1\80\D0\B8\D1\81\D1\82\D1\80\D1\96\D0\B9_\D0\BC\D0\B0\D0\B2\D0\BA\D0\B8_\D0\BF\D0\B5\D1\80\D0\B5\D0\BA\D0\BE\D0\B4\D1\83\D0\B2\D0\B0\D1\82\D0\B8_\D1\8E8_\D0\B2_\D0\BA\D0\B4"(i64 %loadtmp44, ptr %loadtmp45, ptr %getelementptrtmp42, ptr %getelementptrtmp43, ptr %alloca9)
   store i1 %calltmp, ptr %alloca11, align 1
   %loadtmp46 = load i1, ptr %alloca11, align 1
-  %icmpetmp = icmp eq i1 %loadtmp46, false
-  %icmpnetmp47 = icmp ne i1 %icmpetmp, false
-  br i1 %icmpnetmp47, label %bb48, label %bb64
+  %icmpnetmp47 = icmp ne i1 %loadtmp46, false
+  br i1 %icmpnetmp47, label %bb48, label %bb56
 
 bb48:                                             ; preds = %bb41
   %loadtmp49 = load ptr, ptr %alloca4, align 8
   %getelementptrtmp50 = getelementptr %"\D0\90\D1\80\D0\B3\D1\83\D0\BC\D0\B5\D0\BD\D1\82\D0\9F\D1\80\D0\BE\D1\87\D0\B8\D1\82\D0\B0\D0\BD\D0\BE\D0\B3\D0\BE\D0\AE8", ptr %loadtmp49, i32 0, i32 2
-  %getelementptrtmp51 = getelementptr %"\D0\BA\D0\B4", ptr %alloca12, i32 0, i32 0
-  store ptr null, ptr %getelementptrtmp51, align 8
-  %getelementptrtmp52 = getelementptr %"\D0\BA\D0\B4", ptr %alloca12, i32 0, i32 1
-  store i64 0, ptr %getelementptrtmp52, align 8
-  %loadtmp53 = load ptr, ptr %getelementptrtmp50, align 8
-  %loadtmp54 = load %"\D0\BA\D0\B4", ptr %alloca12, align 8
-  %loadtmp55 = load i64, ptr %alloca9, align 8
-  %loadtmp56 = load ptr, ptr %alloca5, align 8
-  call void %loadtmp53(%"\D0\BA\D0\B4" %loadtmp54, i1 false, i64 1, i64 %loadtmp55, ptr %loadtmp56)
-  br label %bb57
+  %loadtmp51 = load i64, ptr %alloca2, align 8
+  %trunctmp = trunc i64 %loadtmp51 to i1
+  %loadtmp52 = load ptr, ptr %getelementptrtmp50, align 8
+  %loadtmp53 = load %"\D0\BA\D0\B4", ptr %alloca8, align 8
+  %loadtmp54 = load ptr, ptr %alloca5, align 8
+  call void %loadtmp52(%"\D0\BA\D0\B4" %loadtmp53, i1 %trunctmp, i64 0, i64 0, ptr %loadtmp54)
+  br label %bb55
 
-bb57:                                             ; preds = %bb64, %bb48
-  %loadtmp58 = load ptr, ptr %alloca4, align 8
-  %getelementptrtmp59 = getelementptr %"\D0\90\D1\80\D0\B3\D1\83\D0\BC\D0\B5\D0\BD\D1\82\D0\9F\D1\80\D0\BE\D1\87\D0\B8\D1\82\D0\B0\D0\BD\D0\BE\D0\B3\D0\BE\D0\AE8", ptr %loadtmp58, i32 0, i32 2
-  %loadtmp60 = load i64, ptr %alloca2, align 8
-  %trunctmp = trunc i64 %loadtmp60 to i1
-  %loadtmp61 = load ptr, ptr %getelementptrtmp59, align 8
-  %loadtmp62 = load %"\D0\BA\D0\B4", ptr %alloca8, align 8
-  %loadtmp63 = load ptr, ptr %alloca5, align 8
-  call void %loadtmp61(%"\D0\BA\D0\B4" %loadtmp62, i1 %trunctmp, i64 0, i64 0, ptr %loadtmp63)
+bb55:                                             ; preds = %bb56, %bb48
   br label %bb31
 
-bb64:                                             ; preds = %bb41
-  br label %bb57
+bb56:                                             ; preds = %bb41
+  %loadtmp57 = load ptr, ptr %alloca4, align 8
+  %getelementptrtmp58 = getelementptr %"\D0\90\D1\80\D0\B3\D1\83\D0\BC\D0\B5\D0\BD\D1\82\D0\9F\D1\80\D0\BE\D1\87\D0\B8\D1\82\D0\B0\D0\BD\D0\BE\D0\B3\D0\BE\D0\AE8", ptr %loadtmp57, i32 0, i32 2
+  %getelementptrtmp59 = getelementptr %"\D0\BA\D0\B4", ptr %alloca12, i32 0, i32 0
+  store ptr null, ptr %getelementptrtmp59, align 8
+  %getelementptrtmp60 = getelementptr %"\D0\BA\D0\B4", ptr %alloca12, i32 0, i32 1
+  store i64 0, ptr %getelementptrtmp60, align 8
+  %loadtmp61 = load ptr, ptr %getelementptrtmp58, align 8
+  %loadtmp62 = load %"\D0\BA\D0\B4", ptr %alloca12, align 8
+  %loadtmp63 = load i64, ptr %alloca9, align 8
+  %loadtmp64 = load ptr, ptr %alloca5, align 8
+  call void %loadtmp61(%"\D0\BA\D0\B4" %loadtmp62, i1 false, i64 1, i64 %loadtmp63, ptr %loadtmp64)
+  br label %bb55
 }
 
 define private void @"\D1\80\D0\BE\D0\B7\D0\BC\D0\BE\D0\B2\D0\B0_\D0\BE\D0\B1\D1\80\D0\BE\D0\B1\D0\B8\D1\82\D0\B8_\D0\B7\D0\BD\D0\B0\D1\87\D0\B5\D0\BD\D0\BD\D1\8F"(ptr %0, %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\97\D0\BD\D0\B0\D1\87\D0\B5\D0\BD\D0\BD\D1\8F" %1) {
