@@ -232,10 +232,10 @@ target triple = "aarch64-pc-windows-gnu"
 @175 = private constant [5 x i8] c"@Q@L\00"
 @176 = private constant [4 x i8] c"@AP\00"
 @177 = private constant [5 x i8] c"DIPN\00"
-@178 = private constant [4 x i8] c"IMO\00"
-@179 = private constant [5 x i8] c"SDOU\00"
-@180 = private constant [4 x i8] c"LFE\00"
-@181 = private constant [5 x i8] c"XGJD\00"
+@178 = private constant [5 x i8] c"IMO\12\00"
+@179 = private constant [6 x i8] c"PQDJ[\00"
+@180 = private constant [8 x i8] c"NGCJMB@\00"
+@181 = private constant [10 x i8] c"MIORBJFQF\00"
 @182 = private constant [2 x i8] c"\7F\00"
 @183 = private constant [2 x i8] c"\7F\00"
 
@@ -8315,19 +8315,19 @@ bb11:                                             ; preds = %bb
   %getelementptrtmp539 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9A\D0\BE\D0\BD\D1\81\D1\82\D0\B0\D0\BD\D1\82\D0\B8\D0\9D\D0\B0\D0\B7\D0\B2", ptr %alloca10, i32 0, i32 113
   store ptr %calltmp538, ptr %getelementptrtmp539, align 8
   %loadtmp540 = load ptr, ptr %alloca, align 8
-  %calltmp541 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp540, %"\D0\BA\D0\B4" { ptr @178, i64 3 })
+  %calltmp541 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp540, %"\D0\BA\D0\B4" { ptr @178, i64 4 })
   %getelementptrtmp542 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9A\D0\BE\D0\BD\D1\81\D1\82\D0\B0\D0\BD\D1\82\D0\B8\D0\9D\D0\B0\D0\B7\D0\B2", ptr %alloca10, i32 0, i32 114
   store ptr %calltmp541, ptr %getelementptrtmp542, align 8
   %loadtmp543 = load ptr, ptr %alloca, align 8
-  %calltmp544 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp543, %"\D0\BA\D0\B4" { ptr @179, i64 4 })
+  %calltmp544 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp543, %"\D0\BA\D0\B4" { ptr @179, i64 5 })
   %getelementptrtmp545 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9A\D0\BE\D0\BD\D1\81\D1\82\D0\B0\D0\BD\D1\82\D0\B8\D0\9D\D0\B0\D0\B7\D0\B2", ptr %alloca10, i32 0, i32 115
   store ptr %calltmp544, ptr %getelementptrtmp545, align 8
   %loadtmp546 = load ptr, ptr %alloca, align 8
-  %calltmp547 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp546, %"\D0\BA\D0\B4" { ptr @180, i64 3 })
+  %calltmp547 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp546, %"\D0\BA\D0\B4" { ptr @180, i64 7 })
   %getelementptrtmp548 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9A\D0\BE\D0\BD\D1\81\D1\82\D0\B0\D0\BD\D1\82\D0\B8\D0\9D\D0\B0\D0\B7\D0\B2", ptr %alloca10, i32 0, i32 116
   store ptr %calltmp547, ptr %getelementptrtmp548, align 8
   %loadtmp549 = load ptr, ptr %alloca, align 8
-  %calltmp550 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp549, %"\D0\BA\D0\B4" { ptr @181, i64 4 })
+  %calltmp550 = call ptr @"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D1\81\D1\82\D0\B2\D0\BE\D1\80\D0\B8\D1\82\D0\B8_\D1\82\D0\B5\D0\BA\D1\81\D1\82"(ptr %loadtmp549, %"\D0\BA\D0\B4" { ptr @181, i64 9 })
   %getelementptrtmp551 = getelementptr %"\D0\BC\D0\B0\D0\B2\D0\BA\D0\B0::\D0\9A\D0\BE\D0\BD\D1\81\D1\82\D0\B0\D0\BD\D1\82\D0\B8\D0\9D\D0\B0\D0\B7\D0\B2", ptr %alloca10, i32 0, i32 117
   store ptr %calltmp550, ptr %getelementptrtmp551, align 8
   %loadtmp552 = load ptr, ptr %alloca, align 8
