@@ -30,7 +30,7 @@ target triple = "x86_64-pc-linux-gnu"
 
 @0 = private constant [15 x i8] c"\D1\80\D0\BE\D0\B7\D0\BC\D0\BE\D0\B2\D0\B0\00"
 @1 = private constant [46 x i8] c"\D0\BA\D1\96\D0\BB\D1\8C\D0\BA\D1\96\D1\81\D1\82\D1\8C_\D0\B0\D1\80\D0\B3\D1\83\D0\BC\D0\B5\D0\BD\D1\82\D1\96\D0\B2 == 0\0A\00"
-@2 = private constant [2 x i8] c"-\8E"
+@2 = private constant [2 x i8] c"-\00"
 @3 = private constant [13 x i8] c"\D0\B2\D0\B5\D1\80\D1\81\D1\96\D1\8F\00"
 @4 = private constant [2 x i8] c"\7F\00"
 @5 = private constant [26 x i8] c",DKMWJFSM~SFIML@QF~T@HJ~q\00"
